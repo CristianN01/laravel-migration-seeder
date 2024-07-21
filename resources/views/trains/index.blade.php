@@ -6,7 +6,6 @@
     <h1>
         Trains
     </h1>
-    @dump($trains)
     <ul>
         @foreach ($trains as $train)
             <li>
@@ -26,7 +25,7 @@
                     N carrozze: <em>{{ $train->numero_carrozze }}</em>
                 </p>
                 <p>
-                    In orario: <em>{{ $train->in_orario }}</em>
+                    In orario: <em>{{ ($train->in_orario) ? 'E in orario' : 'E in ritardo' }}</em>
                 </p>
                 <p>
                     <em>{{ $train->cancellato }}</em>
